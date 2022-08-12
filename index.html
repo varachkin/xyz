@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            border: 1px solid red;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            position: relative;
+            border: 1px solid blue;
+            flex-grow: 1;
+            background: rgba(0, 255, 0, 0.05);
+        }
+
+        section {
+            border-radius: 50%;
+            border: 1px solid yellow;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            background: #ff0000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 555;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <button id="move-to">moveTo</button>
+            <input type="number" placeholder="X position" id="x-pos">
+            <input type="number" placeholder="Y position" id="y-pos">
+            <input type="number" placeholder="Duration" id="speed">
+        </li>
+        <li>
+            <button>Rotate</button>
+            <input type="text" placeholder="Degree">
+        </li>
+        <li>
+            <button id="b">DynamicMoveTo</button>
+        </li>
+    </ul>
+</nav>
+<main id="canvas">
+    <section id="unit">
+        &#8226
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
